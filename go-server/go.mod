@@ -1,4 +1,4 @@
-module go-busybee
+module go-server
 
 go 1.15
 

@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"time"
 
 	"go-server/models"
 
@@ -20,7 +21,8 @@ import (
 // DB connection string
 // for localhost mongoDB
 // const connectionString = "mongodb://localhost:27017"
-const connectionString = "mongodb+srv://reika:<hcbaqYDnRMSLpSL3>@busybee.ev3jh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+const fullURL = 'mongodb://localhost:8080/busybee'
+const connectionString = "mongodb+srv://reika:doggy@busybee.ev3jh.mongodb.net/busybee?retryWrites=true&w=majority"
 
 // Database Name
 const dbName = "test"
@@ -33,16 +35,22 @@ var collection *mongo.Collection
 
 // create connection with mongo db
 func init() {
-
-	// Set client options
-	clientOptions := options.Client().ApplyURI(connectionString)
-
-	// connect to MongoDB
-	client, err := mongo.Connect(context.TODO(), clientOptions)
-
+	ctx, cancel := context.WithTimeout(context.Background(), 20*time.Second)
+	defer cancel()
+	client, err := mongo.Connect(ctx, options.Client().ApplyURI(connectionString))
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	// // Set client options
+	// clientOptions := options.Client().ApplyURI(connectionString)
+
+	// // connect to MongoDB
+	// client, err := mongo.Connect(context.TODO(), clientOptions)
+
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
 
 	// Check the connection
 	err = client.Ping(context.TODO(), nil)
