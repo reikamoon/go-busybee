@@ -7,7 +7,8 @@ import (
 	"log"
 	"net/http"
 
-	"../models"
+	"go-server/models"
+
 	"github.com/gorilla/mux"
 
 	"go.mongodb.org/mongo-driver/bson"
@@ -19,7 +20,7 @@ import (
 // DB connection string
 // for localhost mongoDB
 // const connectionString = "mongodb://localhost:27017"
-const connectionString = "Connection String"
+const connectionString = "mongodb+srv://reika:<hcbaqYDnRMSLpSL3>@busybee.ev3jh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
 // Database Name
 const dbName = "test"
