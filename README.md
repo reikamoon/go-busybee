@@ -2,5 +2,5 @@
 by reikamoon :ribbon:
 
 ## About :bee:
-A to-list app created in Go and React, with Mongodb as a database.
+A to-do-list app created in Go and React, with MongoDB as a database.
 
