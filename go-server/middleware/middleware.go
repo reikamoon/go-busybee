@@ -21,7 +21,6 @@ import (
 // DB connection string
 // for localhost mongoDB
 // const connectionString = "mongodb://localhost:27017"
-const fullURL = 'mongodb://localhost:8080/busybee'
 const connectionString = "mongodb+srv://reika:doggy@busybee.ev3jh.mongodb.net/busybee?retryWrites=true&w=majority"
 
 // Database Name
