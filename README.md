@@ -3,19 +3,23 @@ by reikamoon :ribbon:
 
 ## About :bee:
 A to-do-list app created in Go and React, with MongoDB as a database. A remake of one of my older projects, busybee:bee:, which was made in 2020 and developed with flask, mongodb, and jinja.
-I followed [this tutorial](https://levelup.gitconnected.com/build-a-todo-app-in-golang-mongodb-and-react-e1357b4690a6) to help me get started.
+
+
+## Materials :books:
+* I followed [this tutorial](https://levelup.gitconnected.com/build-a-todo-app-in-golang-mongodb-and-react-e1357b4690a6) to help me get started.
+* I used [this tutorial](https://www.w3schools.com/js/js_date_methods.asp) to help me implement dates into my app.
 
 
 ## Requirements :heavy_exclamation_mark:
 
 ### Golang Server Requirement
 
-:one: Golang https://golang.org/dl/
-:two: gorilla/mux package for router `go get -u github.com/gorilla/mux`
+:one: Golang https://golang.org/dl/<br>
+:two: gorilla/mux package for router `go get -u github.com/gorilla/mux`<br>
 :three: mongo-driver package to connect with mongoDB `go get go.mongodb.org/mongo-driver`
 
 ## How to Get Started :bulb:
-:one: <b>Clone the Repo:</b>
+:one: <br>Clone the Repo:</br>
 `git clone https://github.com/reikamoon/go-busybee.git`
 
 :two: <b> From the go-server directory, run:</b>
